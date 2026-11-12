@@ -606,3 +606,7 @@ window.全部評量 = UNIT.重點.flatMap((r) =>
 const 資源v = () => `?v=${(window.CONFIG && CONFIG.資源版本) || 1}`;
 window.頁圖 = (n) => `assets/pages/p${String(n).padStart(2, "0")}.webp${資源v()}`;
 window.卡圖 = (n) => `assets/cards/card${String(n).padStart(2, "0")}_front.webp${資源v()}`;
+/* 語音路徑：教學頁、評量題目、解說（2026-11-12 補上：原本缺這三個，再唸一次與評量語音會丟錯） */
+window.頁音 = (n) => `assets/audio/p${String(n).padStart(2, "0")}.mp3`;
+window.題音 = (題頁) => `assets/audio/q${String(題頁).padStart(2, "0")}.mp3`;
+window.答音 = (解頁) => `assets/audio/ans${String(解頁).padStart(2, "0")}.mp3`;
